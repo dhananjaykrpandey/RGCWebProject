@@ -1,4 +1,8 @@
-export default {
+export default defineNuxtConfig({
+  target: 'static', // Set the target to 'static'
+  generate: {
+    fallback: '404.html', // Handle 404 errors in static sites
+  },
   app: {
     head: {
       title: 'My Nuxt 3 App',
@@ -27,4 +31,4 @@ export default {
       hmr: true, // Ensure this is set to true
     },
   },
-};
+});
